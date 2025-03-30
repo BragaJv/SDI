@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animais</title>
+  </head>
+
+  <body>
+    <h1>Cadastro de Animais</h1>
+
+    <form action="http://localhost:3000" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>DADOS DO ANIMAL</legend>
+
+        <p><label for="nome">Nome:</label><br>
+          <input type="text" size="30" id="nome" name="nome" autofocus>
+        </p>
+
+        <fieldset>
+          <legend>ESPÉCIE:</legend>
+
+          <input type="radio" id="canina" name="especie" value="Canina">
+          <label for="canina">Canina</label>
+
+          <input type="radio" id="felina" name="especie" value="Felina">
+          <label for="felina">Felina</label>
+        </fieldset>
+
+        <p><label for="raca">Raça</label><br>
+          <input type="text" size="30" id="raca" name="raca" list="racas">
+        </p>
+
+        <datalist id="racas">
+          <option value="Poddle"></option>
+          <option value="Street Dog"></option>
+          <option value="Pastor Alemão"></option>
+          <option value="Pastor Belga"></option>
+          <option value="Fila Brasileiro"></option>
+          <option value="Fila Argentino"></option>
+          <option value="Siamês"></option>
+          <option value="Street Cat"></option>
+          <option value="Bulldog"></option>
+          <option value="Pitbull"></option>
+        </datalist>
+
+        <hr>
+        <p><input type="submit" value="Cadastrar Animal"></p>
+      </fieldset>
+    </form>
+  </body>
+</html>
